@@ -1,0 +1,72 @@
+/*credit to source*/
+
+
+/*source https://scotch.io/bar-talk/build-a-css-grid-calculator-solution-to-code-challenge-2 */
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+.calculator input,
+.butt {
+    font-family: 'Space Mono';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #6e93d8;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #111;
+    border-radius: 5px;
+}
+
+.butt {
+    background: rgba(0, 0, 0, 0.5);
+    /* light background with opacity 50% */
+    border: 1px solid #111;
+    /* black border */
+    padding: 20px;
+    color: #EEE;
+    /* white text */
+    border-radius: 5px;
+    /* rounded corners */
+    font-size: 22px;
+    /* larger fonts */
+    cursor: pointer;
+    /* make it look clickable */
+}
+
+.calculator input {
+    /* reset basic form styles */
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 2px solid #111;
+    color: #333;
+    text-align: right;
+    font-size: 40px;
+    border-radius: 0;
+}
+
+.calc-buttons {
+    /* small spacing within our container */
+    padding: 20px;
+    /* the grid stuff! */
+    display: grid;
+    /* create 4 columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.is-equal {
+    background: #28D060;
+}

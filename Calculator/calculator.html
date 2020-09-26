@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>A Simple Calculator</title>
-    </head>
-    <body>
-        <div >
-            <input type="text" id = "textbox" name = "box" onkeypress="return validate(event)"><br>
-            <div>
-                <button type="button" id = "one" value="1" onclick="inputNumber(this.id)">1</button>
-                <button type="button" id = "two" value="2" onclick="inputNumber(this.id)">2</button>
-                <button type="button" id = "three" value="3" onclick="inputNumber(this.id)">3</button>
-                <button type="button" id = "clear" onclick="cleartextfield()">C</button>
-            </div>
-            <div>
-                <button type="button" id = "four" value="4" onclick="inputNumber(this.id)">4</button>
-                <button type="button" id = "five" value="5" onclick="inputNumber(this.id)">5</button>
-                <button type="button" id = "six" value="6"  onclick="inputNumber(this.id)">6</button>
-                <button type="button" id = "divide" value="/" onclick = "inputOperator(this.id)">/</button>
-            </div>
-            <div>
-                <button type="button" id = "seven" value="7" onclick="inputNumber(this.id)">7</button>
-                <button type="button" id = "eight" value="8" onclick="inputNumber(this.id)">8</button>
-                <button type="button" id = "nine" value="9"  onclick="inputNumber(this.id)">9</button>
-                <button type="button" id = "multiply" value="*" onclick="inputOperator(this.id)">*</button>
-            </div>
-            <div>
-                <button type="button" id = "equal" onclick="showResultAfterOperation()">=</button>
-                <button type="button" id = "zero" value="0"  onclick="inputNumber(this.id)">0</button>
-                <button type="button" id = "add"  value = "+" onclick="inputOperator(this.id)">+</button>
-                <button type="button" id = "diff" value ="-" onclick="inputOperator(this.id)">-</button>
-            </div>
+
+<head>
+    <title>A Simple Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="textbox" name="box" onkeypress="return validate(event)"><br>
+        <div class="calc-buttons">
+            <button type="button" class="butt" id="one" value="1" onclick="inputNumber(this.id)">1</button>
+            <button type="button" class="butt" id="two" value="2" onclick="inputNumber(this.id)">2</button>
+            <button type="button" class="butt" id="three" value="3" onclick="inputNumber(this.id)">3</button>
+            <button type="button" class="butt" onclick="cleartextfield()">C</button>
+
+
+            <button type="button" class="butt" id="four" value="4" onclick="inputNumber(this.id)">4</button>
+            <button type="button" class="butt" id="five" value="5" onclick="inputNumber(this.id)">5</button>
+            <button type="button" class="butt" id="six" value="6" onclick="inputNumber(this.id)">6</button>
+            <button type="button" class="butt" id="divide" value="/" onclick="inputOperator(this.id)">&divide;</button>
+
+
+            <button type="button" class="butt" id="seven" value="7" onclick="inputNumber(this.id)">7</button>
+            <button type="button" class="butt" id="eight" value="8" onclick="inputNumber(this.id)">8</button>
+            <button type="button" class="butt" id="nine" value="9" onclick="inputNumber(this.id)">9</button>
+            <button type="button" class="butt" id="multiply" value="*" onclick="inputOperator(this.id)">&times;</button>
+
+
+            <button type="button" class="butt is-equal" onclick="showResultAfterOperation()">&equals;</button>
+            <button type="button" class="butt" id="zero" value="0" onclick="inputNumber(this.id)">0</button>
+            <button type="button" class="butt" id="add" value="+" onclick="inputOperator(this.id)">&plus;</button>
+            <button type="button" class="butt" id="diff" value="-" onclick="inputOperator(this.id)">&minus;</button>
         </div>
-        <script src="calculator.js"></script>
-        <script src="validatetext.js"></script>
-    </body>
+    </div>
+    <script src="calculator.js"></script>
+    <script src="validatetext.js"></script>
+</body>
+
 </html>
