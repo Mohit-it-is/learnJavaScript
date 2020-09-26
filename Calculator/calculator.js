@@ -19,9 +19,6 @@ function inputOperator(operator_id) {
 
 function showResultAfterOperation() {
     var read_string = readValueofTextBox();
-    var split_string = read_string.split("+");
-    
-    var result = parseInt(split_string[0]) + parseInt(split_string[1]);
-
+    var result = eval(read_string);
     document.getElementById("textbox").value = result;
 }
